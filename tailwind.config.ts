@@ -25,10 +25,11 @@ export default {
 			},
 			colors: {
 				mile: {
-					blue: '#007BFF',
+					navy: '#1E2751', // Dark navy blue from the image
+					gold: '#F9B331', // Gold color from the image
 					'light-blue': '#D3E4FD',
 					white: '#FFFFFF',
-					orange: '#F28C38',
+					orange: '#F28C38', 
 					gray: '#8E9196',
 					'light-gray': '#F1F0FB',
 					'dark-gray': '#403E43',

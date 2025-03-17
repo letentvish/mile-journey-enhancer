@@ -102,7 +102,7 @@
 
 @layer components {
   .glass {
-    @apply bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg;
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
   }
   
   .neumorphic {
@@ -114,13 +114,13 @@
   }
   
   .btn-primary {
-    @apply bg-mile-blue text-white px-6 py-3 rounded-full font-medium
+    @apply bg-mile-gold text-mile-navy px-6 py-3 rounded-full font-medium
            hover:shadow-lg hover:scale-105 transition-all duration-300
            active:scale-95 active:shadow-inner;
   }
   
   .btn-secondary {
-    @apply bg-white text-mile-blue border border-mile-blue px-6 py-3 rounded-full font-medium
+    @apply bg-transparent text-mile-gold border border-mile-gold px-6 py-3 rounded-full font-medium
            hover:shadow-lg hover:scale-105 transition-all duration-300
            active:scale-95 active:shadow-inner;
   }
