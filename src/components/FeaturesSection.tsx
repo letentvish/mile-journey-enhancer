@@ -1,43 +1,43 @@
 
 import React from 'react';
-import { BookOpen, Code, BarChart3, Users, Smartphone } from 'lucide-react';
+import { BookOpen, Play, CheckSquare, MessageSquare, Smartphone } from 'lucide-react';
 import FeatureCard from './FeatureCard';
 
 const FeaturesSection = () => {
   const features = [
     {
-      title: 'Acquire',
-      description: 'AI-driven recruitment & skill assessment to find the perfect match for your organization.',
+      title: 'Course and Content Management',
+      description: 'Create, deliver, and organize courses with ease. Upload files in any format and integrate existing courses into a marketplace for learning and growth.',
       icon: BookOpen
     },
     {
-      title: 'Retain',
-      description: 'Personalized learning paths & upskilling programs to keep your talent engaged and growing.',
-      icon: Code
+      title: 'Bring Your Own Learning (BYOL)',
+      description: 'Personalize your learning by creating and uploading your own content to the platform.',
+      icon: Play
     },
     {
-      title: 'Multiply',
-      description: 'Drive business growth through continuous learning and performance improvement.',
-      icon: BarChart3
+      title: 'Assessment and Evaluation',
+      description: 'Design quizzes, exams, and projects with automated grading and feedback mechanisms to track progress.',
+      icon: CheckSquare
     },
     {
-      title: 'Engage',
-      description: 'Build a culture of continuous learning through collaborative social experiences.',
-      icon: Users
+      title: 'Social Learning and Gamification',
+      description: 'Engage with peers and instructors through chat and collaboration tools, plus enjoy a gamified experience to enhance learning.',
+      icon: MessageSquare
     },
     {
-      title: 'Accelerate',
-      description: 'Fast-track skill development with AI-powered mobile learning platforms tailored to your needs.',
+      title: 'Mobile Learning and Personalization',
+      description: 'Access MILE on the go with mobile-optimized learning and personalized recommendations tailored to your needs.',
       icon: Smartphone
     }
   ];
 
   return (
-    <section id="features" className="section bg-mile-navy/10">
-      <h2 className="section-heading">Key <span className="text-mile-gold">Features</span></h2>
+    <section id="features" className="section bg-white">
+      <h2 className="h3-heading text-center mb-12">Key Features of <span className="text-mile-orange">MILE</span></h2>
       
       {/* Desktop View - Dynamic grid */}
-      <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {features.map((feature, index) => (
           <FeatureCard 
             key={index}

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Play } from 'lucide-react';
 
 const FeatureTag = ({ text }: { text: string }) => {
   return (
@@ -37,50 +38,45 @@ const FeatureTag = ({ text }: { text: string }) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-mile-navy">
-      {/* Decorative Elements */}
-      <div className="absolute -top-10 -right-10 w-64 h-64 bg-mile-gold/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/3 -left-10 w-64 h-64 bg-mile-gold/10 rounded-full blur-3xl"></div>
+    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-gradient-to-br from-mile-purple to-mile-gold">
+      {/* Decorative elements - interconnected nodes graphic */}
+      <div className="absolute inset-0 opacity-20 bg-[url('/lovable-uploads/nodes-pattern.png')] bg-repeat"></div>
       
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column - Text Content */}
-        <div className="animate-fade-in">
+        <div className="animate-fade-in z-10">
           <div className="inline-block mb-6 rounded-full bg-white/10 backdrop-blur-sm px-4 py-1 text-white text-sm">
             EXPERIENCE THE JOURNEY
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight text-white">
-            Empowering <span className="text-mile-gold">Growth.</span>
-          </h1>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-            Elevating <span className="text-mile-gold">Potential</span>
+          <h1 className="h1-heading mb-2 text-mile-dark-gray animate-glow">
+            MILE: <span className="text-mile-gold">Multiply, Influence, Lead, Engage</span>
           </h1>
           
-          <p className="text-lg md:text-xl mb-8 text-white/80">
-            Transform your potential through our cutting-edge educational technology products & solutions.
+          <p className="body-bold mb-8 text-mile-gray">
+            Unlock your potential with an AI-powered learning platform designed for skill acceleration and personalized growth.
           </p>
           
           <div className="flex flex-wrap gap-4 mb-8">
-            <button className="px-6 py-3 rounded-full border border-mile-gold text-mile-gold font-medium 
-                       hover:bg-mile-gold hover:text-mile-navy transition-all duration-300">
-              Learn More About Us
+            <button className="btn-primary flex items-center">
+              Start Your Journey
             </button>
-            <button className="px-6 py-3 rounded-full bg-mile-gold text-mile-navy font-medium 
-                       hover:shadow-lg hover:bg-white transition-all duration-300">
-              Get Started Today
+            <button className="btn-secondary flex items-center gap-2">
+              <Play size={16} />
+              Watch MILE Movie
             </button>
           </div>
         </div>
         
-        {/* Right Column - Image with Feature Tags */}
+        {/* Right Column - Dashboard Mockup */}
         <div className="relative">
           <div className={cn(
-            "relative rounded-2xl border-4 border-mile-gold/30 overflow-hidden animate-scale-in",
+            "relative rounded-2xl border-4 border-mile-stroke overflow-hidden animate-scale-in shadow-xl",
           )}>
-            {/* Student Image */}
+            {/* Dashboard Mockup */}
             <img 
               src="/lovable-uploads/b29f304a-848f-44ca-a270-512ffa2d831b.png" 
-              alt="Student using laptop" 
+              alt="MILE Dashboard Mockup" 
               className="w-full h-auto rounded-xl"
             />
             

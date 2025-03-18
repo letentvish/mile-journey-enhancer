@@ -1,56 +1,51 @@
 
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, GraduationCap } from 'lucide-react';
 
 const FooterCTA = () => {
   return (
-    <section className="bg-mile-navy/90 text-white py-16 px-6 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-mile-purple to-mile-purple/70 text-mile-dark-gray py-16 px-6 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,#F9B331,transparent_70%)] opacity-10"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/lovable-uploads/nodes-pattern.png')] bg-repeat"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Learning Journey?</h2>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/80">
-            Join thousands of individuals and organizations already leveraging MILE to accelerate skills development and career growth.
+          <h2 className="h3-heading mb-4 text-mile-gold">Ready to Transform Your Learning Journey?</h2>
+          <p className="body-regular max-w-3xl mx-auto text-white">
+            Join MILE today to multiply your skills, influence your future, lead with confidence, and engage with a global community.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:scale-105 transition-transform">
+          <div className="bg-white/90 backdrop-blur-md border border-mile-stroke rounded-xl p-6 text-center hover:scale-105 transition-transform">
             <div className="w-16 h-16 rounded-full bg-mile-gold/20 flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-mile-gold">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
+              <GraduationCap size={28} className="text-mile-gold" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">For Individuals</h3>
-            <p className="mb-6 text-white/80">Accelerate your career growth and build in-demand skills</p>
-            <button className="bg-mile-gold text-mile-navy px-6 py-2 rounded-full font-medium hover:bg-white transition-colors">
+            <h3 className="text-xl font-semibold mb-2 text-mile-dark-gray">For Individuals</h3>
+            <p className="mb-6 text-mile-gray">Accelerate your career growth and build in-demand skills</p>
+            <button className="bg-mile-gold text-mile-dark-gray px-6 py-2 rounded-full font-bold hover:bg-[#FFD54F] transition-colors">
               Start Your Journey
             </button>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-            <div className="w-16 h-16 rounded-full bg-mile-gold/20 flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-mile-gold">
+          <div className="bg-white/90 backdrop-blur-md border border-mile-stroke rounded-xl p-6 text-center hover:scale-105 transition-transform">
+            <div className="w-16 h-16 rounded-full bg-mile-orange/20 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-mile-orange">
                 <path d="M18 6H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h13l4-3.5L18 6Z"></path>
                 <path d="M12 13v8"></path>
                 <path d="M5 13v6a2 2 0 0 0 2 2h12"></path>
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">For Institutions</h3>
-            <p className="mb-6 text-white/80">Enhance your academic offerings with cutting-edge technology</p>
-            <button className="bg-mile-gold text-mile-navy px-6 py-2 rounded-full font-medium hover:bg-white transition-colors">
+            <h3 className="text-xl font-semibold mb-2 text-mile-dark-gray">For Institutions</h3>
+            <p className="mb-6 text-mile-gray">Enhance your academic offerings with cutting-edge technology</p>
+            <button className="bg-mile-orange text-mile-dark-gray px-6 py-2 rounded-full font-bold hover:bg-[#FFCA28] transition-colors">
               Partner With Us
             </button>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-            <div className="w-16 h-16 rounded-full bg-mile-gold/20 flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-mile-gold">
+          <div className="bg-white/90 backdrop-blur-md border border-mile-stroke rounded-xl p-6 text-center hover:scale-105 transition-transform">
+            <div className="w-16 h-16 rounded-full bg-mile-info/20 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-mile-info">
                 <path d="M19.435 5.445a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1Z"></path>
                 <path d="M5.425 19.445a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1Z"></path>
                 <path d="M19.435 14.435a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1Z"></path>
@@ -61,21 +56,21 @@ const FooterCTA = () => {
                 <path d="M17.435 5.435v3.1a5 5 0 0 1-5 5h-1.1"></path>
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">For Organizations</h3>
-            <p className="mb-6 text-white/80">Develop your future workforce and upskill existing employees</p>
-            <button className="bg-mile-gold text-mile-navy px-6 py-2 rounded-full font-medium hover:bg-white transition-colors">
+            <h3 className="text-xl font-semibold mb-2 text-mile-dark-gray">For Organizations</h3>
+            <p className="mb-6 text-mile-gray">Develop your future workforce and upskill existing employees</p>
+            <button className="bg-mile-gold text-mile-dark-gray px-6 py-2 rounded-full font-bold hover:bg-[#FFD54F] transition-colors">
               Corporate Solutions
             </button>
           </div>
         </div>
         
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center">
-          <a href="tel:+919611058522" className="flex items-center gap-2 hover:text-mile-gold transition-colors">
+          <a href="tel:+919611058522" className="flex items-center gap-2 text-white hover:text-mile-gold transition-colors">
             <Phone size={20} />
             +91-9611058522
           </a>
-          <span className="hidden md:inline">|</span>
-          <a href="mailto:consult@multiplierskraft.com" className="flex items-center gap-2 hover:text-mile-gold transition-colors">
+          <span className="hidden md:inline text-white">|</span>
+          <a href="mailto:consult@multiplierskraft.com" className="flex items-center gap-2 text-white hover:text-mile-gold transition-colors">
             <Mail size={20} />
             consult@multiplierskraft.com
           </a>

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -92,11 +92,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-opensans;
+    @apply bg-background text-mile-gray font-poppins;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat font-bold;
+    @apply font-poppins font-bold;
   }
 }
 
@@ -114,14 +114,14 @@
   }
   
   .btn-primary {
-    @apply bg-mile-gold text-mile-navy px-6 py-3 rounded-full font-medium
-           hover:shadow-lg hover:scale-105 transition-all duration-300
+    @apply bg-mile-gold text-mile-dark-gray px-6 py-3 rounded-full font-bold
+           hover:bg-[#FFD54F] transition-all duration-300
            active:scale-95 active:shadow-inner;
   }
   
   .btn-secondary {
-    @apply bg-transparent text-mile-gold border border-mile-gold px-6 py-3 rounded-full font-medium
-           hover:shadow-lg hover:scale-105 transition-all duration-300
+    @apply bg-mile-orange text-mile-dark-gray px-6 py-3 rounded-full font-bold
+           hover:bg-[#FFCA28] transition-all duration-300
            active:scale-95 active:shadow-inner;
   }
   
@@ -133,7 +133,37 @@
     @apply text-3xl md:text-4xl font-bold mb-12 text-center;
   }
   
-  .section-subheading {
-    @apply text-xl md:text-2xl font-semibold mb-4;
+  .h1-heading {
+    @apply text-4xl md:text-5xl font-semibold leading-tight;
+  }
+  
+  .h2-heading {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .h3-heading {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  .body-regular {
+    @apply text-base font-normal leading-relaxed;
+  }
+  
+  .body-bold {
+    @apply text-lg md:text-xl font-normal leading-relaxed;
+  }
+  
+  .caption {
+    @apply text-sm md:text-base font-bold text-mile-accent;
+  }
+  
+  .mile-card {
+    @apply bg-mile-light-gray border border-mile-stroke rounded-xl p-6 
+           hover:border-mile-success transition-all duration-300;
+  }
+  
+  .mile-icon-container {
+    @apply w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 
+           border border-mile-stroke shadow-md;
   }
 }
