@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { GraduationCap, Building2, School, CheckCircle } from 'lucide-react';
+import { GraduationCap, Building2, School, Check } from 'lucide-react';
 
 const BenefitsSection = () => {
   const [activeTab, setActiveTab] = useState<'students' | 'institutions' | 'organizations'>('students');
@@ -51,106 +51,64 @@ const BenefitsSection = () => {
   const activeContent = tabContent[activeTab];
 
   return (
-    <section id="benefits" className="section bg-mile-light-gray/50">
-      <h2 className="h3-heading text-center mb-8">
-        Who Can Benefit from <span className="text-mile-orange">MILE</span>?
-      </h2>
-      
-      {/* Tab Navigation - Desktop */}
-      <div className="hidden md:flex justify-center mb-10">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id as typeof activeTab)}
-            className={cn(
-              "flex items-center gap-2 px-6 py-3 rounded-full font-bold mx-2 transition-all",
-              activeTab === tab.id 
-                ? "bg-mile-info text-white shadow-lg" 
-                : "bg-white text-mile-gray border border-mile-stroke hover:bg-mile-light-gray"
-            )}
-          >
-            <tab.icon size={20} />
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      
-      {/* Tab Navigation - Mobile */}
-      <div className="md:hidden grid grid-cols-1 gap-2 mb-8">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id as typeof activeTab)}
-            className={cn(
-              "flex items-center gap-2 px-4 py-3 rounded-lg font-bold transition-all",
-              activeTab === tab.id 
-                ? "bg-mile-info text-white shadow-lg" 
-                : "bg-white text-mile-gray border border-mile-stroke hover:bg-mile-light-gray"
-            )}
-          >
-            <tab.icon size={20} />
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      
-      {/* Tab Content */}
-      <div className="bg-white border border-mile-stroke rounded-xl animate-fade-in p-8 md:p-12 max-w-5xl mx-auto shadow-lg">
-        <h3 className="text-2xl font-bold mb-4 text-mile-dark-gray">{activeContent.title}</h3>
-        <p className="text-lg mb-8 text-mile-gray">{activeContent.description}</p>
+    <section id="benefits" className="section bg-gradient-to-b from-gray-300 to-gray-200">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-white mb-12">
+          Who Can Benefit from <span className="text-mile-gold">MILE</span>?
+        </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h4 className="text-xl font-semibold mb-4 text-mile-dark-gray">Key Benefits:</h4>
-            <ul className="space-y-3">
-              {activeContent.benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle size={20} className="text-mile-info mt-1 flex-shrink-0" />
-                  <span className="text-mile-gray">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <button className={cn(
-              "mt-8 px-6 py-3 rounded-full font-bold transition-all",
-              activeTab === 'institutions' 
-                ? "bg-mile-orange text-mile-dark-gray hover:bg-[#FFCA28]" 
-                : "bg-mile-gold text-mile-dark-gray hover:bg-[#FFD54F]"
-            )}>
-              {activeContent.cta}
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as typeof activeTab)}
+              className={cn(
+                "flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all",
+                activeTab === tab.id 
+                  ? "bg-white/20 text-white shadow-lg border-2 border-mile-gold/50" 
+                  : "bg-white/10 text-white/80 backdrop-blur-sm hover:bg-white/15"
+              )}
+            >
+              <tab.icon size={20} className={activeTab === tab.id ? "text-mile-gold" : "text-white/70"} />
+              {tab.label}
             </button>
+          ))}
+        </div>
+        
+        {/* Tab Content */}
+        <div className="grid md:grid-cols-2 gap-8 items-center text-left px-6">
+          <div className="text-white">
+            <h3 className="text-3xl font-bold mb-4">{activeContent.title}</h3>
+            <p className="text-lg mb-8 text-white/80">{activeContent.description}</p>
+            
+            <div>
+              <h4 className="text-xl font-semibold mb-6 text-white">Key Benefits:</h4>
+              <ul className="space-y-5">
+                {activeContent.benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-mile-gold/20 flex items-center justify-center">
+                      <Check size={16} className="text-mile-gold" />
+                    </span>
+                    <span className="text-white/90">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="mt-10 px-8 py-3 rounded-full font-bold bg-white/10 backdrop-blur-sm border border-mile-gold/50 text-white hover:bg-white/20 transition-all">
+                {activeContent.cta}
+              </button>
+            </div>
           </div>
           
-          <div className="neumorphic p-8 flex items-center justify-center">
-            {activeTab === 'students' && (
-              <div className="text-center">
-                <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap size={48} className="text-mile-info" />
-                </div>
-                <h4 className="text-xl font-semibold mb-2 text-mile-dark-gray">Student Success</h4>
-                <p className="text-mile-gray">93% of students report improved job prospects after completing MILE programs</p>
-              </div>
-            )}
-            
-            {activeTab === 'institutions' && (
-              <div className="text-center">
-                <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <School size={48} className="text-mile-info" />
-                </div>
-                <h4 className="text-xl font-semibold mb-2 text-mile-dark-gray">Institution Impact</h4>
-                <p className="text-mile-gray">87% increase in student engagement with curriculum integrated MILE platform</p>
-              </div>
-            )}
-            
-            {activeTab === 'organizations' && (
-              <div className="text-center">
-                <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building2 size={48} className="text-mile-info" />
-                </div>
-                <h4 className="text-xl font-semibold mb-2 text-mile-dark-gray">Organizational Value</h4>
-                <p className="text-mile-gray">76% reduction in time-to-hire and 68% improvement in employee retention</p>
-              </div>
-            )}
+          <div className="bg-gray-600/20 backdrop-blur-md rounded-3xl p-10 text-center border border-white/10">
+            <div className="w-20 h-20 bg-gray-700/50 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20">
+              <GraduationCap size={40} className="text-white" />
+            </div>
+            <h4 className="text-2xl font-semibold mb-4 text-white">Student Success</h4>
+            <p className="text-white/80">
+              93% of students report improved job prospects after completing MILE programs
+            </p>
           </div>
         </div>
       </div>
