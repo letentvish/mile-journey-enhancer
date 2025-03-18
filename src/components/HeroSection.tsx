@@ -38,7 +38,7 @@ const FeatureTag = ({ text }: { text: string }) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-gradient-to-br from-mile-purple to-mile-gold">
+    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-gradient-to-br from-mile-navy to-mile-dark-navy">
       {/* Decorative elements - interconnected nodes graphic */}
       <div className="absolute inset-0 opacity-20 bg-[url('/lovable-uploads/nodes-pattern.png')] bg-repeat"></div>
       
@@ -49,7 +49,7 @@ const HeroSection = () => {
             EXPERIENCE THE JOURNEY
           </div>
           
-          <h1 className="h1-heading mb-2 text-mile-dark-gray animate-glow">
+          <h1 className="h1-heading mb-2 text-mile-gray animate-glow">
             MILE: <span className="text-mile-gold">Multiply, Influence, Lead, Engage</span>
           </h1>
           
@@ -71,7 +71,7 @@ const HeroSection = () => {
         {/* Right Column - Dashboard Mockup */}
         <div className="relative">
           <div className={cn(
-            "relative rounded-2xl border-4 border-mile-stroke overflow-hidden animate-scale-in shadow-xl",
+            "relative rounded-2xl border-4 border-mile-gold/30 overflow-hidden animate-scale-in shadow-xl",
           )}>
             {/* Dashboard Mockup */}
             <img 
