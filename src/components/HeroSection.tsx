@@ -5,7 +5,7 @@ import { Play } from 'lucide-react';
 
 const FeatureTag = ({ text }: { text: string }) => {
   return (
-    <div className="bg-white/20 backdrop-blur-sm text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
+    <div className="bg-blue-800/50 backdrop-blur-sm text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
       {text === "AI-Powered Learning" && (
         <div className="w-6 h-6">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -38,22 +38,22 @@ const FeatureTag = ({ text }: { text: string }) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-gradient-to-br from-mile-navy to-mile-dark-navy">
+    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-blue-900">
       {/* Decorative elements - interconnected nodes graphic */}
       <div className="absolute inset-0 opacity-20 bg-[url('/lovable-uploads/nodes-pattern.png')] bg-repeat"></div>
       
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column - Text Content */}
         <div className="animate-fade-in z-10">
-          <div className="inline-block mb-6 rounded-full bg-white/10 backdrop-blur-sm px-4 py-1 text-white text-sm">
+          <div className="inline-block mb-6 rounded-full bg-blue-800/30 backdrop-blur-sm px-4 py-1 text-white text-sm">
             EXPERIENCE THE JOURNEY
           </div>
           
-          <h1 className="h1-heading mb-2 text-mile-gray animate-glow">
+          <h1 className="h1-heading mb-2 text-white animate-glow">
             MILE: <span className="text-mile-gold">Multiply, Influence, Lead, Engage</span>
           </h1>
           
-          <p className="body-bold mb-8 text-mile-gray">
+          <p className="body-bold mb-8 text-blue-100">
             Unlock your potential with an AI-powered learning platform designed for skill acceleration and personalized growth.
           </p>
           
