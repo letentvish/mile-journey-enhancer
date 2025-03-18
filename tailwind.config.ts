@@ -24,20 +24,19 @@ export default {
 			},
 			colors: {
 				mile: {
-					navy: '#1E2751', // Keeping this for backward compatibility
-					gold: '#FFC107', // Updated to match new brand primary
-					'light-blue': '#D3E4FD',
-					white: '#FFFFFF',
-					orange: '#FFB300', // New brand secondary
-					gray: '#4E4E4E', // Others body
-					'light-gray': '#E3E3E3', // Background color 3
-					'dark-gray': '#000000', // Others black
-					purple: '#AF7AF5', // Background color 1
-					accent: '#6060AE', // Others caption
-					stroke: '#D2D2D2', // Stroke 2
-					'stroke-light': '#F5F5F5', // Stroke 1
-					info: '#2196F3', // Functional informational
-					success: '#4CAF50', // Functional success
+					'navy': '#0e1945', // Dark blue background from image
+					'dark-navy': '#070e2c', // Darker variation
+					'gold': '#FFC107', // Gold color
+					'orange': '#FFB300',
+					'gray': '#F5F5F5', // Light gray for text on dark backgrounds
+					'light-gray': '#E3E3E3',
+					'dark-gray': '#000000',
+					'purple': '#AF7AF5',
+					'accent': '#6060AE',
+					'stroke': '#D2D2D2',
+					'stroke-light': '#F5F5F5',
+					'info': '#2196F3',
+					'success': '#4CAF50',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -153,6 +152,11 @@ export default {
 			boxShadow: {
 				'neumorphic': '10px 10px 20px rgba(0, 0, 0, 0.05), -10px -10px 20px rgba(255, 255, 255, 0.9)',
 				'neumorphic-inset': 'inset 5px 5px 10px rgba(0, 0, 0, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.9)',
+				'navy-card': '0 8px 24px rgba(0, 0, 0, 0.3)'
+			},
+			backgroundImage: {
+				'navy-gradient': 'linear-gradient(to right, #0e1945, #132158)',
+				'navy-gradient-br': 'linear-gradient(to bottom right, #0e1945, #1e2d65)',
 			}
 		}
 	},

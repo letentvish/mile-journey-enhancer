@@ -114,15 +114,13 @@
   }
   
   .btn-primary {
-    @apply bg-mile-gold text-mile-dark-gray px-6 py-3 rounded-full font-bold
-           hover:bg-[#FFD54F] transition-all duration-300
-           active:scale-95 active:shadow-inner;
+    @apply bg-mile-gold hover:bg-[#FFD54F] text-mile-dark-gray px-6 py-3 rounded-lg font-bold
+           transition-all duration-300 active:scale-95 active:shadow-inner;
   }
   
   .btn-secondary {
-    @apply bg-mile-orange text-mile-dark-gray px-6 py-3 rounded-full font-bold
-           hover:bg-[#FFCA28] transition-all duration-300
-           active:scale-95 active:shadow-inner;
+    @apply bg-mile-orange hover:bg-[#FFCA28] text-mile-dark-gray px-6 py-3 rounded-lg font-bold
+           transition-all duration-300 active:scale-95 active:shadow-inner;
   }
   
   .section {
@@ -158,12 +156,12 @@
   }
   
   .mile-card {
-    @apply bg-mile-light-gray border border-mile-stroke rounded-xl p-6 
-           hover:border-mile-success transition-all duration-300;
+    @apply bg-gradient-to-br from-mile-navy to-mile-dark-navy border border-mile-gold/20 rounded-xl p-6 
+           hover:border-mile-gold transition-all duration-300 text-white shadow-navy-card;
   }
   
   .mile-icon-container {
-    @apply w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 
-           border border-mile-stroke shadow-md;
+    @apply w-16 h-16 rounded-full bg-mile-navy flex items-center justify-center mb-6 
+           border border-mile-gold/30 shadow-md;
   }
 }

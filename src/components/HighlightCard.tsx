@@ -24,11 +24,11 @@ const HighlightCard = ({
       {/* Content */}
       <div className="relative">
         <div className="mile-icon-container">
-          <Icon className="text-mile-info" size={28} />
+          <Icon className="text-mile-gold" size={28} />
         </div>
         
-        <h3 className="text-xl font-semibold mb-4 text-mile-dark-gray">{title}</h3>
-        <p className="text-mile-gray mb-5 text-sm leading-relaxed">{description}</p>
+        <h3 className="text-xl font-semibold mb-4 text-mile-gray">{title}</h3>
+        <p className="text-mile-gray/80 mb-5 text-sm leading-relaxed">{description}</p>
         
         <button className="text-mile-gold font-bold flex items-center text-sm hover:text-[#FFD54F] transition-colors">
           Join Now
