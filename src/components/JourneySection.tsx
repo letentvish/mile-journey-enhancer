@@ -217,7 +217,7 @@ const JourneySection = () => {
                       <div className="w-12 h-12 rounded-full mx-auto flex items-center justify-center mb-3" style={{ backgroundColor: `${milestone.color}20` }}>
                         <milestone.icon size={24} style={{ color: milestone.color }} />
                       </div>
-                      <h4 className="font-bold text-sm mb-1" style={{ color: milestone.color }}>{title}</h4>
+                      <h4 className="font-bold text-sm mb-1" style={{ color: milestone.color }}>{milestone.title}</h4>
                       <p className="text-xs text-mile-accent">{milestone.description}</p>
                     </div>
                   </div>
