@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -173,7 +172,6 @@
   
   .path-dashing {
     stroke-dasharray: 20,20;
-    opacity: 0;
   }
   
   .animate-draw-path {
@@ -181,6 +179,9 @@
   }
   
   @keyframes draw-path {
+    from {
+      stroke-dashoffset: 1500;
+    }
     to {
       stroke-dashoffset: 0;
     }
