@@ -57,7 +57,7 @@ const Milestone = ({ title, description, icon: Icon, color, position, index }: M
         {/* Badge */}
         <div className={cn(
           "w-16 h-16 rounded-full flex items-center justify-center mb-2 relative z-10",
-          "border border-mile-stroke bg-white/10 backdrop-blur-sm shadow-lg"
+          "border border-mile-gold/30 bg-mile-navy/60 backdrop-blur-sm shadow-lg"
         )}>
           <div className={cn(
             "w-12 h-12 rounded-full flex items-center justify-center"
@@ -76,9 +76,9 @@ const Milestone = ({ title, description, icon: Icon, color, position, index }: M
       </div>
       
       {/* Content */}
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 max-w-xs md:max-w-sm shadow-lg border border-white/20 mt-4">
+      <div className="bg-mile-navy/60 backdrop-blur-sm rounded-xl p-4 max-w-xs md:max-w-sm shadow-lg border border-mile-gold/20 mt-4">
         <h4 className="font-bold text-sm mb-1" style={{ color: color }}>{title}</h4>
-        <p className="text-xs text-mile-accent">{description}</p>
+        <p className="text-xs text-white/80">{description}</p>
       </div>
     </div>
   );
@@ -146,8 +146,10 @@ const JourneySection = () => {
   ];
 
   return (
-    <section id="journey" ref={sectionRef} className="section bg-[#2E2E3D] text-white relative py-20">
-      <div className="container mx-auto px-4">
+    <section id="journey" ref={sectionRef} className="section bg-[#0B1336] text-white relative py-20">
+      <div className="absolute inset-0 opacity-10 bg-[url('/lovable-uploads/cef2e7a1-9583-41fe-9f27-41e888f00506.png')] bg-repeat"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-mile-orange">
           Your MILE Journey: Gamified Learning with Badges
         </h2>
@@ -165,7 +167,7 @@ const JourneySection = () => {
             <path 
               d="M0,100 C150,30 300,170 500,100 C700,30 850,170 1000,100" 
               fill="none" 
-              stroke="#1A1A2E" 
+              stroke="#0F1A46" 
               strokeWidth="30" 
               strokeLinecap="round"
             />
@@ -201,7 +203,7 @@ const JourneySection = () => {
         
         {/* Mobile Journey Path */}
         <div className="md:hidden">
-          <div className="relative w-2 bg-[#1A1A2E] mx-auto" style={{minHeight: '800px'}}>
+          <div className="relative w-2 bg-[#0F1A46] mx-auto" style={{minHeight: '800px'}}>
             <div className="absolute inset-0 w-full h-full">
               <div className="h-full w-0.5 bg-mile-gold/50 mx-auto" style={{backgroundImage: 'linear-gradient(#FFC107 33%, rgba(255,255,255,0) 0%)', backgroundPosition: 'right', backgroundSize: '2px 30px', backgroundRepeat: 'repeat-y'}}></div>
             </div>
@@ -213,12 +215,12 @@ const JourneySection = () => {
                     <div className="w-6 h-6 rounded-full border-2 border-white z-10" style={{ backgroundColor: milestone.color }}></div>
                   </div>
                   <div className="w-full pl-8">
-                    <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl shadow-lg text-center">
+                    <div className="bg-mile-navy/60 backdrop-blur-sm p-4 rounded-xl shadow-lg text-center border border-mile-gold/20">
                       <div className="w-12 h-12 rounded-full mx-auto flex items-center justify-center mb-3" style={{ backgroundColor: `${milestone.color}20` }}>
                         <milestone.icon size={24} style={{ color: milestone.color }} />
                       </div>
                       <h4 className="font-bold text-sm mb-1" style={{ color: milestone.color }}>{milestone.title}</h4>
-                      <p className="text-xs text-mile-accent">{milestone.description}</p>
+                      <p className="text-xs text-white/80">{milestone.description}</p>
                     </div>
                   </div>
                 </div>

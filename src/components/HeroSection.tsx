@@ -5,29 +5,29 @@ import { Play } from 'lucide-react';
 
 const FeatureTag = ({ text }: { text: string }) => {
   return (
-    <div className="bg-blue-800/50 backdrop-blur-sm text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
+    <div className="bg-mile-navy/80 backdrop-blur-sm text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg border border-mile-gold/30">
       {text === "AI-Powered Learning" && (
         <div className="w-6 h-6">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="white"/>
-            <path d="M13 7H11V13H17V11H13V7Z" fill="white"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#FFC107"/>
+            <path d="M13 7H11V13H17V11H13V7Z" fill="#FFC107"/>
           </svg>
         </div>
       )}
       {text === "Performance Analytics" && (
         <div className="w-6 h-6">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <path d="M3 13H5V21H3V13Z" fill="white"/>
-            <path d="M9 9H11V21H9V9Z" fill="white"/>
-            <path d="M15 5H17V21H15V5Z" fill="white"/>
-            <path d="M21 3H3V5H21V3Z" fill="white"/>
+            <path d="M3 13H5V21H3V13Z" fill="#FFC107"/>
+            <path d="M9 9H11V21H9V9Z" fill="#FFC107"/>
+            <path d="M15 5H17V21H15V5Z" fill="#FFC107"/>
+            <path d="M21 3H3V5H21V3Z" fill="#FFC107"/>
           </svg>
         </div>
       )}
       {text === "Industry-Aligned" && (
         <div className="w-6 h-6">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <path d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM17 15.99L12 18.72L7 15.99V12.27L12 15L17 12.27V15.99Z" fill="white"/>
+            <path d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM17 15.99L12 18.72L7 15.99V12.27L12 15L17 12.27V15.99Z" fill="#FFC107"/>
           </svg>
         </div>
       )}
@@ -38,14 +38,14 @@ const FeatureTag = ({ text }: { text: string }) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-blue-900">
+    <section className="relative min-h-screen pt-24 md:pt-32 overflow-hidden bg-mile-navy">
       {/* Decorative elements - interconnected nodes graphic */}
-      <div className="absolute inset-0 opacity-20 bg-[url('/lovable-uploads/nodes-pattern.png')] bg-repeat"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/lovable-uploads/cef2e7a1-9583-41fe-9f27-41e888f00506.png')] bg-repeat"></div>
       
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column - Text Content */}
         <div className="animate-fade-in z-10">
-          <div className="inline-block mb-6 rounded-full bg-blue-800/30 backdrop-blur-sm px-4 py-1 text-white text-sm">
+          <div className="inline-block mb-6 rounded-full bg-mile-navy/80 backdrop-blur-sm px-4 py-1 text-white text-sm border border-mile-gold/30">
             EXPERIENCE THE JOURNEY
           </div>
           

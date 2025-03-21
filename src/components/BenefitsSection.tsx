@@ -51,106 +51,110 @@ const BenefitsSection = () => {
   const activeContent = tabContent[activeTab];
 
   return (
-    <section id="benefits" className="section bg-mile-light-gray/50">
-      <h2 className="h3-heading text-center mb-8">
-        Who Can Benefit from <span className="text-mile-orange">MILE</span>?
-      </h2>
+    <section id="benefits" className="section bg-[#0D1639] relative">
+      <div className="absolute inset-0 opacity-10 bg-[url('/lovable-uploads/cef2e7a1-9583-41fe-9f27-41e888f00506.png')] bg-repeat"></div>
       
-      {/* Tab Navigation - Desktop */}
-      <div className="hidden md:flex justify-center mb-10">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id as typeof activeTab)}
-            className={cn(
-              "flex items-center gap-2 px-6 py-3 rounded-full font-bold mx-2 transition-all",
-              activeTab === tab.id 
-                ? "bg-mile-info text-white shadow-lg" 
-                : "bg-white text-mile-gray border border-mile-stroke hover:bg-mile-light-gray"
-            )}
-          >
-            <tab.icon size={20} />
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      
-      {/* Tab Navigation - Mobile */}
-      <div className="md:hidden grid grid-cols-1 gap-2 mb-8">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id as typeof activeTab)}
-            className={cn(
-              "flex items-center gap-2 px-4 py-3 rounded-lg font-bold transition-all",
-              activeTab === tab.id 
-                ? "bg-mile-info text-white shadow-lg" 
-                : "bg-white text-mile-gray border border-mile-stroke hover:bg-mile-light-gray"
-            )}
-          >
-            <tab.icon size={20} />
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      
-      {/* Tab Content */}
-      <div className="bg-white border border-mile-stroke rounded-xl animate-fade-in p-8 md:p-12 max-w-5xl mx-auto shadow-lg">
-        <h3 className="text-2xl font-bold mb-4 text-mile-dark-gray">{activeContent.title}</h3>
-        <p className="text-lg mb-8 text-mile-gray">{activeContent.description}</p>
+      <div className="relative z-10">
+        <h2 className="h3-heading text-center mb-8 text-white">
+          Who Can Benefit from <span className="text-mile-orange">MILE</span>?
+        </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h4 className="text-xl font-semibold mb-4 text-mile-dark-gray">Key Benefits:</h4>
-            <ul className="space-y-3">
-              {activeContent.benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle size={20} className="text-mile-info mt-1 flex-shrink-0" />
-                  <span className="text-mile-gray">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <button className={cn(
-              "mt-8 px-6 py-3 rounded-full font-bold transition-all",
-              activeTab === 'institutions' 
-                ? "bg-mile-orange text-mile-dark-gray hover:bg-[#FFCA28]" 
-                : "bg-mile-gold text-mile-dark-gray hover:bg-[#FFD54F]"
-            )}>
-              {activeContent.cta}
+        {/* Tab Navigation - Desktop */}
+        <div className="hidden md:flex justify-center mb-10">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as typeof activeTab)}
+              className={cn(
+                "flex items-center gap-2 px-6 py-3 rounded-full font-bold mx-2 transition-all",
+                activeTab === tab.id 
+                  ? "bg-mile-info text-white shadow-lg" 
+                  : "bg-mile-navy/60 text-white border border-mile-gold/20 hover:bg-mile-navy"
+              )}
+            >
+              <tab.icon size={20} />
+              {tab.label}
             </button>
-          </div>
+          ))}
+        </div>
+        
+        {/* Tab Navigation - Mobile */}
+        <div className="md:hidden grid grid-cols-1 gap-2 mb-8">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as typeof activeTab)}
+              className={cn(
+                "flex items-center gap-2 px-4 py-3 rounded-lg font-bold transition-all",
+                activeTab === tab.id 
+                  ? "bg-mile-info text-white shadow-lg" 
+                  : "bg-mile-navy/60 text-white border border-mile-gold/20 hover:bg-mile-navy"
+              )}
+            >
+              <tab.icon size={20} />
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        
+        {/* Tab Content */}
+        <div className="bg-mile-navy/60 backdrop-blur-sm border border-mile-gold/20 rounded-xl animate-fade-in p-8 md:p-12 max-w-5xl mx-auto shadow-lg">
+          <h3 className="text-2xl font-bold mb-4 text-white">{activeContent.title}</h3>
+          <p className="text-lg mb-8 text-blue-100">{activeContent.description}</p>
           
-          <div className="neumorphic p-8 flex items-center justify-center">
-            {activeTab === 'students' && (
-              <div className="text-center">
-                <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap size={48} className="text-mile-info" />
-                </div>
-                <h4 className="text-xl font-semibold mb-2 text-mile-dark-gray">Student Success</h4>
-                <p className="text-mile-gray">93% of students report improved job prospects after completing MILE programs</p>
-              </div>
-            )}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h4 className="text-xl font-semibold mb-4 text-mile-gold">Key Benefits:</h4>
+              <ul className="space-y-3">
+                {activeContent.benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle size={20} className="text-mile-info mt-1 flex-shrink-0" />
+                    <span className="text-white/80">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className={cn(
+                "mt-8 px-6 py-3 rounded-full font-bold transition-all",
+                activeTab === 'institutions' 
+                  ? "bg-mile-orange text-mile-dark-gray hover:bg-[#FFCA28]" 
+                  : "bg-mile-gold text-mile-dark-gray hover:bg-[#FFD54F]"
+              )}>
+                {activeContent.cta}
+              </button>
+            </div>
             
-            {activeTab === 'institutions' && (
-              <div className="text-center">
-                <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <School size={48} className="text-mile-info" />
+            <div className="bg-mile-navy/80 backdrop-blur-sm p-8 rounded-xl flex items-center justify-center border border-mile-gold/20">
+              {activeTab === 'students' && (
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-mile-info/30">
+                    <GraduationCap size={48} className="text-mile-info" />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-2 text-white">Student Success</h4>
+                  <p className="text-white/80">93% of students report improved job prospects after completing MILE programs</p>
                 </div>
-                <h4 className="text-xl font-semibold mb-2 text-mile-dark-gray">Institution Impact</h4>
-                <p className="text-mile-gray">87% increase in student engagement with curriculum integrated MILE platform</p>
-              </div>
-            )}
-            
-            {activeTab === 'organizations' && (
-              <div className="text-center">
-                <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building2 size={48} className="text-mile-info" />
+              )}
+              
+              {activeTab === 'institutions' && (
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-mile-info/30">
+                    <School size={48} className="text-mile-info" />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-2 text-white">Institution Impact</h4>
+                  <p className="text-white/80">87% increase in student engagement with curriculum integrated MILE platform</p>
                 </div>
-                <h4 className="text-xl font-semibold mb-2 text-mile-dark-gray">Organizational Value</h4>
-                <p className="text-mile-gray">76% reduction in time-to-hire and 68% improvement in employee retention</p>
-              </div>
-            )}
+              )}
+              
+              {activeTab === 'organizations' && (
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-mile-info/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-mile-info/30">
+                    <Building2 size={48} className="text-mile-info" />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-2 text-white">Organizational Value</h4>
+                  <p className="text-white/80">76% reduction in time-to-hire and 68% improvement in employee retention</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

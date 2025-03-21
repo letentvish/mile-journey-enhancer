@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,14 +23,14 @@ export default {
 			},
 			colors: {
 				mile: {
-					'navy': '#0e1945', // Dark blue background from image
-					'dark-navy': '#070e2c', // Darker variation
+					'navy': '#0F1A46', // Darker navy from the image
+					'dark-navy': '#0B1336', // Even darker navy for gradients
 					'gold': '#FFC107', // Gold color
 					'orange': '#FFB300',
 					'gray': '#F5F5F5', // Light gray for text on dark backgrounds
 					'light-gray': '#E3E3E3',
 					'dark-gray': '#000000',
-					'purple': '#AF7AF5',
+					'purple': '#7662D0', // Adjusted to be more subtle
 					'accent': '#6060AE',
 					'stroke': '#D2D2D2',
 					'stroke-light': '#F5F5F5',
@@ -81,6 +80,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'navy-gradient': 'linear-gradient(to right, #0F1A46, #152158)',
+				'navy-gradient-br': 'linear-gradient(to bottom right, #0F1A46, #1e2d65)',
+				'navy-pattern': 'url("/lovable-uploads/cef2e7a1-9583-41fe-9f27-41e888f00506.png")'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -153,10 +157,6 @@ export default {
 				'neumorphic': '10px 10px 20px rgba(0, 0, 0, 0.05), -10px -10px 20px rgba(255, 255, 255, 0.9)',
 				'neumorphic-inset': 'inset 5px 5px 10px rgba(0, 0, 0, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.9)',
 				'navy-card': '0 8px 24px rgba(0, 0, 0, 0.3)'
-			},
-			backgroundImage: {
-				'navy-gradient': 'linear-gradient(to right, #0e1945, #132158)',
-				'navy-gradient-br': 'linear-gradient(to bottom right, #0e1945, #1e2d65)',
 			}
 		}
 	},

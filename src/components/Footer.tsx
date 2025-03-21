@@ -4,7 +4,7 @@ import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-mile-purple text-white pt-16 pb-8 px-6">
+    <footer className="bg-mile-dark-navy text-white pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 text-center text-mile-accent">
+        <div className="border-t border-white/10 pt-8 text-center text-white/50">
           <p>© {new Date().getFullYear()} Multiplierskraft. All rights reserved.</p>
         </div>
       </div>

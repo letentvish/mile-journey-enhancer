@@ -33,31 +33,35 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="section bg-white">
-      <h2 className="h3-heading text-center mb-12">Key Features of <span className="text-mile-orange">MILE</span></h2>
+    <section id="features" className="section bg-mile-navy relative">
+      <div className="absolute inset-0 opacity-10 bg-[url('/lovable-uploads/cef2e7a1-9583-41fe-9f27-41e888f00506.png')] bg-repeat"></div>
       
-      {/* Desktop View - Dynamic grid */}
-      <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-        {features.map((feature, index) => (
-          <FeatureCard 
-            key={index}
-            title={feature.title}
-            description={feature.description}
-            icon={feature.icon}
-          />
-        ))}
-      </div>
-      
-      {/* Mobile View - Single column stack */}
-      <div className="md:hidden grid grid-cols-1 gap-6">
-        {features.map((feature, index) => (
-          <FeatureCard 
-            key={index}
-            title={feature.title}
-            description={feature.description}
-            icon={feature.icon}
-          />
-        ))}
+      <div className="relative z-10">
+        <h2 className="h3-heading text-center mb-12">Key Features of <span className="text-mile-orange">MILE</span></h2>
+        
+        {/* Desktop View - Dynamic grid */}
+        <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {features.map((feature, index) => (
+            <FeatureCard 
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              icon={feature.icon}
+            />
+          ))}
+        </div>
+        
+        {/* Mobile View - Single column stack */}
+        <div className="md:hidden grid grid-cols-1 gap-6">
+          {features.map((feature, index) => (
+            <FeatureCard 
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              icon={feature.icon}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
